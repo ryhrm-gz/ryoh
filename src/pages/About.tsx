@@ -58,6 +58,7 @@ export const About = () => {
             <TitleWrapper key={item} text={item} />
           ))}
         </Box>
+        <Box></Box>
         <Group direction="column" position="right" style={{ width: "100%" }}>
           {nav.map((item) => (
             <NavWrapper key={item.name} nav={item} />
