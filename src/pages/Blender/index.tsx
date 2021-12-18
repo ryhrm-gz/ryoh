@@ -3,7 +3,7 @@ import { Nav } from "../../components/Nav";
 import { PageTitle } from "../../components/PageTitle";
 import { BlenderList } from "../../components/BlenderList";
 
-const title = ["B", "L", "N", "D", "E", "R"];
+const title = ["B", "L", "E", "N", "D", "E", "R"];
 
 const nav = [
   { name: "Top", link: "/" },

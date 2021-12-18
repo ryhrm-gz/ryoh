@@ -22,19 +22,21 @@ const BlenderItem = ({ id, title, images }: BlenderList) => {
   const imgSrc = images[0].image.url + "?fit=crop&w=370&h=370";
   return (
     <Box style={{ width: "45%" }}>
-      <Image
-        src={imgSrc}
-        alt={title}
-        width="100%"
-        sx={() => ({
-          "&:hover": {
-            margin: "-4px",
-            border: "4px solid #c21500",
-            borderImage: "linear-gradient(65deg, #4c6ef5 0%, #15aabf 100%)",
-            borderImageSlice: 1,
-          },
-        })}
-      />
+      <Anchor component={Link} to={`/blender/${id}`}>
+        <Image
+          src={imgSrc}
+          alt={title}
+          width="100%"
+          sx={() => ({
+            "&:hover": {
+              margin: "-4px",
+              border: "4px solid #c21500",
+              borderImage: "linear-gradient(65deg, #4c6ef5 0%, #15aabf 100%)",
+              borderImageSlice: 1,
+            },
+          })}
+        />
+      </Anchor>
     </Box>
   );
 };
