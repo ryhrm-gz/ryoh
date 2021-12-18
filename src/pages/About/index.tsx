@@ -1,7 +1,7 @@
-import { setTitle } from "../lib/setTitle";
-import { Nav } from "../components/Nav";
-import { PageTitle } from "../components/PageTitle";
-import { Skill } from "../components/Skill";
+import { setTitle } from "../../lib/setTitle";
+import { Nav } from "../../components/Nav";
+import { PageTitle } from "../../components/PageTitle";
+import { SkillList } from "../../components/SkillList";
 
 const title = ["A", "B", "O", "U", "T"];
 
@@ -16,7 +16,7 @@ export const About = () => {
   return (
     <>
       <PageTitle title={title} />
-      <Skill />
+      <SkillList />
       <Nav nav={nav} />
     </>
   );

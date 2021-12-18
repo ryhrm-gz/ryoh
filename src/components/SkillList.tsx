@@ -1,32 +1,15 @@
 import useSWR from "swr";
+import { MictoCmsRes } from "../lib/microcms";
 import { fetcher } from "../lib/fetcher";
 import { Box, Group, Text, Loader } from "@mantine/core";
 import { Heading } from "./Heading";
 
 type SkillList = {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  publishedAt: Date;
-  revisedAt: Date;
   title: string;
-  startedAt: Date;
+  startedAt: string;
 };
 
-type MictoCmsRes = {
-  contents: SkillList[];
-  totalCount: number;
-  offset: number;
-  limit: number;
-};
-
-const SkillItem = ({
-  title,
-  startedAt,
-}: {
-  title: string;
-  startedAt: Date;
-}) => {
+const SkillItem = ({ title, startedAt }: SkillList) => {
   const d = new Date(startedAt);
   const start = `${d.getFullYear()}`;
   return (
@@ -41,24 +24,20 @@ const SkillItem = ({
   );
 };
 
-export const Skill = () => {
-  const { data, error } = useSWR<MictoCmsRes>(
-    "https://ryoh.microcms.io/api/v1/skill",
+export const SkillList = () => {
+  const { data, error } = useSWR<MictoCmsRes<SkillList>>(
+    "https://ryoh.microcms.io/api/v1/skill?fields=title%2CstartedAt",
     fetcher
   );
 
   if (error) return <div>Error</div>;
-  if (!data) return <Loader color="dark" size="sm" variant="bars" />;
+  if (!data) return <Loader color="gray" size="sm" variant="bars" />;
 
   return (
     <Group direction="column">
       <Heading text="スキル" />
       {data.contents.map((item) => (
-        <SkillItem
-          key={item.title}
-          title={item.title}
-          startedAt={item.startedAt}
-        />
+        <SkillItem key={item.title} {...item} />
       ))}
     </Group>
   );
