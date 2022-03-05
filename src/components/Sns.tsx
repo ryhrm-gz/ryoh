@@ -39,6 +39,7 @@ const sns = [
     name: "Twitch",
     link: "https://www.twitch.tv/ryoh555",
   },
+  { name: "GitHub", link: "https://github.com/ryhrm-gz" },
 ];
 
 export const Sns = () => {
