@@ -28,17 +28,18 @@ const sns = [
     link: "https://twitter.com/ryoh555",
   },
   {
-    name: "YouTube",
-    link: "https://www.youtube.com/channel/UCBZXxEztkFo5_EG68YpvCkA",
-  },
-  {
     name: "Niconico",
     link: "https://www.nicovideo.jp/mylist/30028746",
+  },
+  {
+    name: "YouTube",
+    link: "https://www.youtube.com/channel/UCBZXxEztkFo5_EG68YpvCkA",
   },
   {
     name: "Twitch",
     link: "https://www.twitch.tv/ryoh555",
   },
+  { name: "GitHub", link: "https://github.com/ryhrm-gz" },
 ];
 
 export const Sns = () => {
