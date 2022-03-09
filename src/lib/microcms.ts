@@ -1,11 +1,8 @@
-const apiKey = "0ddd34b43cdd4b939968e90ab3246091b266";
+export const apiKey = import.meta.env.VITE_MICROCMS_APIKEY;
 
-type MictoCmsRes<T> = {
+export type MictoCmsRes<T> = {
   contents: T[];
   totalCount: number;
   offset: number;
   limit: number;
 };
-
-export { apiKey };
-export type { MictoCmsRes };
