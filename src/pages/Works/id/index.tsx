@@ -9,7 +9,7 @@ const nav = [
   { name: "← Works", link: "/works" },
   { name: "Top", link: "/" },
   { name: "About", link: "/about" },
-  { name: "Blender", link: "/blender" },
+  // { name: "Blender", link: "/blender" },
 ];
 
 export const WorksId = () => {
