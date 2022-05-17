@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { fetcher } from "../lib/fetcher";
+import { fetcher } from "../utils/fetcher";
 import { Box, Group, Text, Loader, Image, Anchor } from "@mantine/core";
 import { Heading } from "./Heading";
 

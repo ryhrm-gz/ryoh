@@ -1,6 +1,6 @@
 import useSWR from "swr";
-import { MictoCmsRes } from "../lib/microcms";
-import { fetcher } from "../lib/fetcher";
+import { MictoCmsRes } from "../utils/microcms";
+import { fetcher } from "../utils/fetcher";
 import { Box, Group, Image, Anchor, Loader } from "@mantine/core";
 import { Link } from "react-router-dom";
 
