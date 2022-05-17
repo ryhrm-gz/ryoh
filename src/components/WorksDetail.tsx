@@ -45,8 +45,8 @@ export const WorksDetail = ({ id }: { id: string | undefined }) => {
         <Box mt="10px">
           <YouTube
             videoId={youtubeId}
-            className={style.iframe}
-            iframeClassName={style.youtube}
+            className={style.youtube}
+            iframeClassName={style.iframe}
           />
         </Box>
       </Box>
