@@ -1,4 +1,4 @@
-import { setTitle } from "../lib/setTitle";
+import { setTitle } from "../utils/setTitle";
 import { Nav } from "../components/Nav";
 import { Sns } from "../components/Sns";
 import { PageTitle } from "../components/PageTitle";
@@ -9,7 +9,7 @@ const lastName = ["H", "I", "R", "A", "M", "A"];
 const nav = [
   { name: "About", link: "/about" },
   { name: "Works", link: "/works" },
-  { name: "Blender", link: "/blender" },
+  // { name: "Blender", link: "/blender" },
 ];
 
 export const Index = () => {

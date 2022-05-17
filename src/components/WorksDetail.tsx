@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { fetcher } from "../lib/fetcher";
+import { fetcher } from "../utils/fetcher";
 import YouTube from "react-youtube";
 import { Box, Group, Text, Loader } from "@mantine/core";
 import { Heading } from "./Heading";
@@ -46,7 +46,7 @@ export const WorksDetail = ({ id }: { id: string | undefined }) => {
           <YouTube
             videoId={youtubeId}
             className={style.iframe}
-            containerClassName={style.youtube}
+            iframeClassName={style.youtube}
           />
         </Box>
       </Box>

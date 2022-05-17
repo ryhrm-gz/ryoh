@@ -1,4 +1,4 @@
-import { setTitle } from "../../lib/setTitle";
+import { setTitle } from "../../utils/setTitle";
 import { Nav } from "../../components/Nav";
 import { PageTitle } from "../../components/PageTitle";
 import { BlenderList } from "../../components/BlenderList";

@@ -1,6 +1,6 @@
 import useSWR from "swr";
-import { MictoCmsRes } from "../lib/microcms";
-import { fetcher } from "../lib/fetcher";
+import { MictoCmsRes } from "../utils/microcms";
+import { fetcher } from "../utils/fetcher";
 import { Box, Group, Text, Loader } from "@mantine/core";
 import { Heading } from "./Heading";
 
@@ -32,6 +32,7 @@ export const SkillList = () => {
 
   if (error) return <div>Error</div>;
   if (!data) return <Loader color="gray" size="sm" variant="bars" />;
+  console.log(data);
 
   return (
     <Group direction="column">
