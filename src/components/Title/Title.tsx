@@ -1,7 +1,6 @@
 import { Avatar, Group, Stack, Text } from "@mantine/core";
 import { useLocation } from "@tanstack/react-location";
 import ProfileImg from "../../assets/profile.jpg";
-import { navLinks } from "../../utils/navLinks";
 import { NavLinks } from "../NavLinks/NavLinks";
 
 export const Title = () => {

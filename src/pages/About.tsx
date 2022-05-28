@@ -1,4 +1,4 @@
-import { Divider, TypographyStylesProvider, Image } from "@mantine/core";
+import { TypographyStylesProvider, Image } from "@mantine/core";
 import FamilyImg from "../assets/family.png";
 
 export const About = () => {

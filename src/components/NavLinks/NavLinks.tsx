@@ -1,4 +1,4 @@
-import { Group, MantineSize, MantineSizes, Stack } from "@mantine/core";
+import { Group, MantineSize, Stack } from "@mantine/core";
 import { useLocation } from "@tanstack/react-location";
 import { navLinks } from "../../utils/navLinks";
 import { NavLinkAnchor } from "./NavLinkAnchor";
@@ -10,8 +10,9 @@ type Props = {
 
 export const NavLinks = ({ size, direction }: Props) => {
   const location = useLocation();
+  const Wrapper = direction === "row" ? Group : Stack;
   return (
-    <Group direction={direction ?? "column"}>
+    <Wrapper>
       {navLinks.map((link) =>
         location.current.pathname !== link.path ? (
           <NavLinkAnchor size={size ?? "lg"} key={link.label} link={link} />
@@ -19,6 +20,6 @@ export const NavLinks = ({ size, direction }: Props) => {
           <></>
         )
       )}
-    </Group>
+    </Wrapper>
   );
 };
