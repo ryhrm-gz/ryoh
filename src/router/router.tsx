@@ -1,10 +1,10 @@
 import { Route, ReactLocation } from "@tanstack/react-location";
-import { queryClient } from "./components/App";
-import { fetchWorksUrl } from "./hooks/useWorks";
-import { About } from "./pages/About";
-import { Home } from "./pages/Home";
-import { Works } from "./pages/Works";
-import { fetchMicroCms } from "./utils/microCms";
+import { queryClient } from "../components/App";
+import { fetchWorksUrl } from "../hooks/useWorks";
+import { About } from "../pages/About";
+import { Home } from "../pages/Home";
+import { Works } from "../pages/Works";
+import { fetchMicroCms } from "../utils/microcms";
 
 export const location = new ReactLocation();
 
