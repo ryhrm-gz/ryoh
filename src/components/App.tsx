@@ -1,7 +1,10 @@
 import { MantineProvider } from "@mantine/core";
 import { Router, Outlet } from "@tanstack/react-location";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { location, routes } from "../router";
 import { Layout } from "./Layout/Layout";
+
+export const queryClient = new QueryClient();
 
 export const App = () => {
   return (
@@ -13,11 +16,13 @@ export const App = () => {
         fontFamily: "'Zen Maru Gothic', sans-serif;",
       }}
     >
-      <Router location={location} routes={routes}>
-        <Layout>
-          <Outlet />
-        </Layout>
-      </Router>
+      <QueryClientProvider client={queryClient}>
+        <Router location={location} routes={routes}>
+          <Layout>
+            <Outlet />
+          </Layout>
+        </Router>
+      </QueryClientProvider>
     </MantineProvider>
   );
 };
