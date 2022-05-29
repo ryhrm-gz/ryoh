@@ -1,7 +1,7 @@
 import { MantineProvider } from "@mantine/core";
 import { Router, Outlet } from "@tanstack/react-location";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { location, routes } from "../router";
+import { location, routes } from "../router/router";
 import { Layout } from "./Layout/Layout";
 
 export const queryClient = new QueryClient();
