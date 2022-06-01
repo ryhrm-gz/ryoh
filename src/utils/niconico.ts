@@ -1,0 +1,1 @@
+export const fetchNiconico = async () => {};
