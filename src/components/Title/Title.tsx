@@ -14,7 +14,7 @@ export const Title = () => {
           <Text weight={700}>Ryo Hirama</Text>
           {home && (
             <Text size="sm">
-              A music content creator, and a software developer.
+              A music content creator, and a frontend engineer.
             </Text>
           )}
         </Stack>
