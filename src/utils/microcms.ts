@@ -14,5 +14,5 @@ export const fetchMicroCms = <T>(url: string) => {
     headers: {
       "X-MICROCMS-API-KEY": API_KEY,
     },
-  }).then((res) => res.json() as T);
+  }).then((res) => res.json() as unknown as T);
 };
