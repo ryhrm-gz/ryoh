@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <TypographyStylesProvider>
       <h1>About</h1>
-      <p>I'm Ryo Hirama. A music content creator, and a software developer.</p>
+      <p>I'm Ryo Hirama. A music content creator, and a frontend engineer.</p>
       <p>I'm from Hokkaido, Japan and live with my wife and a child.</p>
       <SimpleGrid cols={3} spacing="xs">
         <div>
