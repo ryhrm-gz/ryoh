@@ -13,12 +13,11 @@ export const NavLinks = ({ size, direction }: Props) => {
   const Wrapper = direction === "row" ? Group : Stack;
   return (
     <Wrapper>
-      {navLinks.map((link) =>
-        location.current.pathname !== link.path ? (
-          <NavLinkAnchor size={size ?? "lg"} key={link.label} link={link} />
-        ) : (
-          <></>
-        )
+      {navLinks.map(
+        (link) =>
+          location.current.pathname !== link.path && (
+            <NavLinkAnchor size={size ?? "lg"} key={link.label} link={link} />
+          )
       )}
     </Wrapper>
   );
