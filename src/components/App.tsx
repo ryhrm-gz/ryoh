@@ -1,4 +1,4 @@
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, ScrollArea } from "@mantine/core";
 import { Router, Outlet } from "@tanstack/react-location";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { location, routes } from "../router/router";
@@ -18,9 +18,11 @@ export const App = () => {
         }}
       >
         <Router location={location} routes={routes}>
-          <Layout>
-            <Outlet />
-          </Layout>
+          <ScrollArea style={{ height: "100vh" }}>
+            <Layout>
+              <Outlet />
+            </Layout>
+          </ScrollArea>
         </Router>
       </MantineProvider>
     </QueryClientProvider>

@@ -8,10 +8,10 @@ export const Works = () => {
 
   if (isLoading) {
     return (
-      <Stack spacing="sm">
-        <Skeleton height={40} />
-        <Skeleton height={40} />
-        <Skeleton height={40} />
+      <Stack spacing="md" mt="lg">
+        <Skeleton height={141} />
+        <Skeleton height={141} />
+        <Skeleton height={141} />
       </Stack>
     );
   }
