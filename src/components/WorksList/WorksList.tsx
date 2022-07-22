@@ -9,7 +9,6 @@ type Props = {
 };
 
 export const WorksList = ({ works }: Props) => {
-  console.log(works);
   return (
     <Stack spacing="md" mt="lg">
       {works.contents.map((work) => (
