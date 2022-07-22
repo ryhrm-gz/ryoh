@@ -11,7 +11,7 @@ type Props = {
 export const WorksList = ({ works }: Props) => {
   console.log(works);
   return (
-    <Stack spacing="lg" mt="lg">
+    <Stack spacing="md" mt="lg">
       {works.contents.map((work) => (
         <WorksListItem work={work} key={work.id} />
       ))}
