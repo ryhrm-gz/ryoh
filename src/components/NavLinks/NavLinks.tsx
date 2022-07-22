@@ -16,7 +16,7 @@ export const NavLinks = ({ size, direction }: Props) => {
       {navLinks.map(
         (link) =>
           location.current.pathname !== link.path && (
-            <NavLinkAnchor size={size ?? "lg"} key={link.label} link={link} />
+            <NavLinkAnchor size={size ?? "md"} key={link.label} link={link} />
           )
       )}
     </Wrapper>
