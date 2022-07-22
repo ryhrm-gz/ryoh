@@ -17,7 +17,11 @@ export const Works = () => {
   }
 
   if (error) {
-    return <Text>Error</Text>;
+    return (
+      <Text mt="lg" color="dimmed">
+        Error
+      </Text>
+    );
   }
 
   return <WorksList works={data!} />;

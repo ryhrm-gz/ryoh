@@ -7,7 +7,7 @@ type Props = {
 
 export const MyLinkAnchor = ({ link }: Props) => {
   return (
-    <Anchor size="lg" color="gray" href={link.url} target="_blank">
+    <Anchor size="md" color="gray" href={link.url} target="_blank">
       {link.label}
     </Anchor>
   );
